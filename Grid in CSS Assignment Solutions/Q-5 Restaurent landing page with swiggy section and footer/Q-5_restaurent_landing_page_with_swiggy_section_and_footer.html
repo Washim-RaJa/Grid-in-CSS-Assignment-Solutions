@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Food</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            display: grid;
+            grid-template-rows: 70px 190px 200px 180px 400px 340px 400px;
+            grid-template-columns: 729px 420px 200px;
+            grid-template-areas: 
+            "nav nav nav"
+            "header aside_img aside"
+            "main aside_img aside"
+            "btn_box aside_img aside"
+            "footer footer footer"
+            "footer_2 footer_2 footer_2"
+            "footer_3 footer_3 footer_3"
+            ;
+        }
+        .navbar{
+            grid-area: nav;
+            display: grid;
+            grid-template-columns: 70px 80px 80px 80px 180px;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px #c7c7c7;
+        }
+        .logo-box{
+            height: 70px;
+            background-image: url(images/logo.png);
+            background-size: 100% 100%;
+        }
+        .home-btn{
+            height: 45px;
+            background-color: #fff;
+            border: none;
+            font-size: 17px;
+        }
+        .home-btn:hover{
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+        .about-btn{
+            height: 45px;
+            background-color: #fff;
+            border: none;
+            font-size: 17px;
+        }
+        .about-btn:hover{
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+        .contact-btn{
+            height: 45px;
+            background-color: #fff;
+            border: none;
+            font-size: 17px;
+        }
+        .contact-btn:hover{
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+        .login-btn{
+            height: 40px;
+            font-family: sans-serif;
+            background-color: #52B960;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+        .login-btn:hover{
+            cursor: pointer;
+            background-color: #51b15e;
+        }
+        .header-box{
+            grid-area: header;
+        }
+        .header-box>h1{
+            font-family: sans-serif;
+            margin-top: 110px;
+            margin-left: 50px;
+        }
+        .main-content{
+            grid-area: main;
+        }
+        .main-content>p{
+            font-family: sans-serif;
+            margin-left: 50px;
+            margin-right: 70px;
+        }
+        .btn-box{
+            grid-area: btn_box;
+        }
+        .btn-box>button{
+            width: 180px;
+            height: 40px;
+            color: white;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+            margin-left: 50px;
+
+        }
+        .aside-img{
+            grid-area: aside_img;
+            background-image: url(images/veg.jpg);
+            background-size: 100% 100%;
+        }
+        .aside{
+            grid-area: aside;
+            background-color: yellow;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: #2B1C15;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 400px;
+            justify-content: space-around;
+            grid-gap: 20;
+        }
+        .order{
+            text-align: center;
+            padding: 100px;
+        }
+        .order>h3{
+            color: #fff;
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 40px;
+        }
+        .order>p{
+            color: #E0CBC1;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 20px;
+        }
+        .tracking{
+            text-align: center;
+            padding: 100px;
+        }
+        .tracking>h3{
+            color: #fff;
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 40px;
+        }
+        .tracking>p{
+            color: #E0CBC1;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 20px;
+        }
+        .delivery{
+            text-align: center;
+            padding: 100px;
+        }
+        .delivery>h3{
+            color: #fff;
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 40px;
+        }
+        .delivery>p{
+            color: #E0CBC1;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 20px;
+        }
+        .footer2{
+            grid-area: footer_2;
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 250px;
+            justify-content: space-evenly;
+            padding-top: 30px;
+        }
+        .footer2>div{
+            border: 1px solid gray;
+            border-radius: 25px;
+        }
+        .online-order{
+            background-image: url(images/orderonline.jpg);
+            background-size: 100% 70%;
+            background-repeat: no-repeat;
+            padding: 35px;
+        }
+        .online-order>h3{
+            font-family: sans-serif;
+            margin-top: 145px;
+        }
+        .online-order>p{
+            color: gray;
+            font-family: sans-serif;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .on-site-dinner{
+            background-image: url(images/diningout.jpg);
+            background-size: 100% 70%;
+            background-repeat: no-repeat;
+            padding: 40px;
+        }
+        .on-site-dinner>h3{
+            font-family: sans-serif;
+            margin-top: 140px;
+        }
+        .on-site-dinner>p{
+            color: gray;
+            font-family: sans-serif;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .nightlife{
+            background-image: url(images/nightlifeandclubs.jpg);
+            background-size: 100% 70%;
+            background-repeat: no-repeat;
+            padding: 35px;
+        }
+        .nightlife>h3{
+            font-family: sans-serif;
+            margin-top: 145px;
+        }
+        .nightlife>p{
+            color: gray;
+            font-family: sans-serif;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .footer3{
+            grid-area: footer_3;
+            background-color: #2B1C15;
+            display: grid;
+            grid-template-columns: 449px 449px 449px;
+            grid-template-rows: 400px;
+        }
+        .footer-nav-links>h1{
+            color: white;
+            font-family: century gothic;
+        }
+        .footer-nav-links{
+            padding: 50px;
+        }
+        .footer-nav-links>ul{
+            list-style: none;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .footer-nav-links>ul>li{
+            line-height: 40px;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #856456;
+        }
+        .footer-nav-links>div{
+            color: white;
+            font-family: century gothic;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+        .learn-more-box>h1{
+            color: white;
+            font-family: century gothic;
+        }
+        .learn-more-box{
+            padding: 50px;
+        }
+        .learn-more-box>ul{
+            list-style: none;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+        .learn-more-box>ul>li{
+            line-height: 40px;
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #856456;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo-box"></div>
+            <button class="home-btn">Home</button>
+            <button class="about-btn">About</button>
+            <button class="contact-btn">Contact</button>
+            <button class="login-btn">Login</button>
+        </div>
+        <div class="header-box">
+            <h1>Healthy Food</h1>
+        </div>
+        <div class="main-content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum officiis cupiditate est similique, ullam porro voluptates iste dolorem modi sed possimus natus veritatis magnam? Neque aspernatur enim deleniti numquam sequi modi officiis, vero sapiente! Sint, quam? Quam totam natus mollitia veritatis corporis cum, nemo placeat quas error minima explicabo quasi aspernatur beatae, ut provident, consectetur soluta. Mollitia quibusdam cumque at provident sint ipsam ea, voluptatum aliquam eaque. Modi harum consequuntur mollitia, nulla libero nemo? A nam totam eius praesentium nulla.
+            </p>
+        </div>
+        <div class="btn-box">
+            <button>Read More</button>
+        </div>
+        <div class="aside-img"></div>
+        <div class="aside"></div>
+        <div class="footer">
+            <div class="order">
+                <img src="images/nmo.jpg" style="width: 120px;margin-top: 40px;">
+                <h3>No Minimum Order</h3>
+                <p>Order in for yourself or for the group, with no restrictions on order value</p>
+            </div>
+            <div class="tracking">
+                <img src="images/lot.jpg"  style="width: 120px;margin-top: 40px;">
+                <h3>Live Order Tracking</h3>
+                <p>Know where your order is at all times, from the restaurant to your doorstep</p>
+            </div>
+            <div class="delivery">
+                <img src="images/LFD.jpg"  style="width: 120px;margin-top: 55px;">
+                <h3>Lightning-Fast Delivery</h3>
+                <p>Experience Swiggy's superfast delivery for food delivered fresh & on time</p>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="online-order">
+                <h3>Order Online</h3>
+                <p>Stay Home and order to your Door Step.</p>
+            </div>
+            <div class="on-site-dinner">
+                <h3>On-site Dining</h3>
+                <p>Veiw the city's favourite dining venues.</p>
+            </div>
+            <div class="nightlife">
+                <h3>Nightlife &amp; Clubs</h3>
+                <p>Explore the city's top nightlife outlets &amp; Book tables.</p>
+            </div>
+        </div>
+        <div class="footer3">
+            <div class="brand-logo">
+                <img src="images/logo.png" style="width: 400px;" alt="">
+            </div>
+            <div class="footer-nav-links">
+                <h1>Navigation Links</h1>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Login</li>
+                </ul>
+                <div> &copy; Copyright All Rights Reserved</div>
+            </div>
+            <div class="learn-more-box">
+                <h1>Learn More</h1>
+                <ul>
+                    <li>Privacy</li>
+                    <li>Security</li>
+                    <li>Terms</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

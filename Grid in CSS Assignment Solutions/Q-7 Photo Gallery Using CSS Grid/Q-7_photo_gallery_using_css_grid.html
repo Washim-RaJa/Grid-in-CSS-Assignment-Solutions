@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width: 1115px;
+            height: 97vh;
+            border: 2px solid black;
+            border-radius: 15px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 350px 350px 350px;
+            grid-gap: 15px;
+            padding: 15px;
+        }
+        .item-1{
+            grid-row: 1/2;
+            background-image: url(images/boat.jpg);
+            background-size: 100% 100%;
+            border-radius: 7px;
+
+        }
+        .item-2{
+            grid-row: 1/3;
+            background-image: url(images/mountain2.jpg);
+            background-size: 100% 120%;
+            border-radius: 7px;
+        }
+        .item-3{
+            background-image: url(images/sea.jpg);
+            background-size: 100% 100%;
+            border-radius: 7px;
+        }
+        .item-4{
+            grid-row: 2/4;
+            background-image: url(images/mountain1.jpg);
+            background-size: 100% 100%;
+            border-radius: 7px;
+        }
+        .item-5{
+            background-image: url(images/boat.jpg);
+            background-size: 100% 100%;
+            border-radius: 7px;
+        }
+        .item-6{
+            grid-row: 2/4;
+            background-image: url(images/mountain3.jpg);
+            background-size: 100% 100%;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
+        <div class="item-4"></div>
+        <div class="item-5"></div>
+        <div class="item-6"></div>
+    </div>
+</body>
+</html>

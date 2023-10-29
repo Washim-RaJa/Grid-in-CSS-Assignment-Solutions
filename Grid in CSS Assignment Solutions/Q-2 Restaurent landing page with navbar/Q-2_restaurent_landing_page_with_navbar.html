@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Food</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            display: grid;
+            grid-template-rows: 70px 190px 200px 180px;
+            grid-template-columns: 729px 420px 200px;
+            grid-template-areas: 
+            "nav nav nav"
+            "header aside_img aside"
+            "main aside_img aside"
+            "footer aside_img aside"
+            ;
+        }
+        .navbar{
+            grid-area: nav;
+            display: grid;
+            grid-template-columns: 70px 80px 80px 80px 180px;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px #c7c7c7;
+        }
+        .logo-box{
+            height: 70px;
+            background-image: url(images/logo.png);
+            background-size: 100% 100%;
+        }
+        .home-btn{
+            height: 45px;
+            background-color: #fff;
+            border: none;
+            font-size: 17px;
+        }
+        .home-btn:hover{
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+        .about-btn{
+            height: 45px;
+            background-color: #fff;
+            border: none;
+            font-size: 17px;
+        }
+        .about-btn:hover{
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+        .contact-btn{
+            height: 45px;
+            background-color: #fff;
+            border: none;
+            font-size: 17px;
+        }
+        .contact-btn:hover{
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+        .login-btn{
+            height: 40px;
+            font-family: sans-serif;
+            background-color: #52B960;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+        .login-btn:hover{
+            cursor: pointer;
+            background-color: #51b15e;
+        }
+        .header-box{
+            grid-area: header;
+        }
+        .header-box>h1{
+            font-family: sans-serif;
+            margin-top: 110px;
+            margin-left: 50px;
+        }
+        .main-content{
+            grid-area: main;
+        }
+        .main-content>p{
+            font-family: sans-serif;
+            margin-left: 50px;
+            margin-right: 70px;
+        }
+        .footer-box{
+            grid-area: footer;
+        }
+        .footer-box>button{
+            width: 180px;
+            height: 40px;
+            color: white;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+            margin-left: 50px;
+        }
+        .aside-img{
+            grid-area: aside_img;
+            background-image: url(images/veg.jpg);
+            background-size: 100% 100%;
+        }
+        .aside{
+            grid-area: aside;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo-box"></div>
+            <button class="home-btn">Home</button>
+            <button class="about-btn">About</button>
+            <button class="contact-btn">Contact</button>
+            <button class="login-btn">Login</button>
+        </div>
+        <div class="header-box">
+            <h1>Healthy Food</h1>
+        </div>
+        <div class="main-content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum officiis cupiditate est similique, ullam porro voluptates iste dolorem modi sed possimus natus veritatis magnam? Neque aspernatur enim deleniti numquam sequi modi officiis, vero sapiente! Sint, quam? Quam totam natus mollitia veritatis corporis cum, nemo placeat quas error minima explicabo quasi aspernatur beatae, ut provident, consectetur soluta. Mollitia quibusdam cumque at provident sint ipsam ea, voluptatum aliquam eaque. Modi harum consequuntur mollitia, nulla libero nemo? A nam totam eius praesentium nulla.
+            </p>
+        </div>
+        <div class="footer-box">
+            <button>Read More</button>
+        </div>
+        <div class="aside-img"></div>
+        <div class="aside"></div>
+    </div>
+</body>
+</html>

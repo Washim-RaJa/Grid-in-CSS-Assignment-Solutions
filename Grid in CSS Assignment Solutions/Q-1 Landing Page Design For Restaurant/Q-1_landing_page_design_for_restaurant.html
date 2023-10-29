@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        *{box-sizing: border-box;}
+        .container{
+            width: 99vw;
+            height: 97vh;
+            border: 3px solid black;
+            padding: 10px;
+            padding-left: 50px;
+            display: grid;
+            grid-template-rows: 190px 200px 180px;
+            grid-template-columns: 685px 400px 200px;
+            grid-template-areas: 
+            "header aside1 aside2"
+            "main aside1 aside2"
+            "footer aside1 aside2" ;
+        }
+        .header-box{
+            grid-area: header;
+        }
+        .header-box>h1{
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+            margin-top: 140px;
+        }
+        .main-content{
+            grid-area: main;
+            padding-right: 77px;
+        }
+        .main-content>p{
+            font-family: sans-serif;
+        }
+        .footer-box{
+            grid-area: footer;
+        }
+        .footer-box>button{
+            width: 180px;
+            height: 40px;
+            color: white;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+        }
+        .aside1{
+            grid-area: aside1;
+            background-image: url(veg.jpg);
+            background-size: 100% 100%;
+        }
+        .aside2{
+            grid-area: aside2;
+            background-color: #F4EC0D;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-box">
+            <h1>Healthy Food</h1>
+        </div>
+        <div class="main-content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum officiis cupiditate est similique, ullam porro voluptates iste dolorem modi sed possimus natus veritatis magnam? Neque aspernatur enim deleniti numquam sequi modi officiis, vero sapiente! Sint, quam? Quam totam natus mollitia veritatis corporis cum, nemo placeat quas error minima explicabo quasi aspernatur beatae, ut provident, consectetur soluta. Mollitia quibusdam cumque at provident sint ipsam ea, voluptatum aliquam eaque. Modi harum consequuntur mollitia, nulla libero nemo? A nam totam eius praesentium nulla.
+            </p>
+        </div>
+        <div class="footer-box">
+            <button>Read More</button>
+        </div>
+        <div class="aside1"></div>       
+        <div class="aside2"></div>       
+    </div>
+</body>
+</html>
